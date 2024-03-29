@@ -176,22 +176,37 @@ public class Library {
 	
 	public boolean updateLocation(int bookId, String newLocation) {
 	    try {
-	        String query = "UPDATE libraryutable SET liblocation = ? WHERE bookid = ?";
+	        String query = "UPDATE libraryutable SET liblocation = ? WHERE boodid = ?";
 	        pstmt = con.prepareStatement(query);
 	        pstmt.setString(1, newLocation);
 	        pstmt.setInt(2, bookId);
-	        int rowsAffected = pstmt.executeUpdate();
+	       
+	        int x = pstmt.executeUpdate();
+			if(x>0) {
+				return true;
+			}
+			else {
+				return false;
+			}
+			
+			
+			
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			
+		}
+		return false;
 	        
-	        return rowsAffected > 0;
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	        return false;
-	    }
+	 //   
 	}
+	
+	
+
 	
 	public boolean deleteBookById(int bookId) {
 	    try {
-	        String query = "DELETE FROM libraryutable WHERE bookid = ?";
+	        String query = "DELETE FROM libraryutable WHERE boodid = ?";
 	        pstmt = con.prepareStatement(query);
 	        pstmt.setInt(1, bookId);
 	        int rowsAffected = pstmt.executeUpdate();
