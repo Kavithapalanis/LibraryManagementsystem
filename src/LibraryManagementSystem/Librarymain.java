@@ -11,7 +11,7 @@ public class Librarymain {
 		int recordsToInsert=1;
 		Library l = new Library();
 		System.out.println("Please select an option to perform:\n"
-				+"1. Insert min of 5 records into the table dynamically\n"
+				+"1. Insert 1 records into the table dynamically\n"
 				+"2. Give all the detailes from the library table\n"
 			    +"3. Select the details of all the library books,which is from a specific location \n"
 				+"4. Select the details of all the library books which is published after a specific year\n"

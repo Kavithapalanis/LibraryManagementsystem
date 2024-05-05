@@ -176,7 +176,7 @@ public class Library {
 	
 	public boolean updateLocation(int bookId, String newLocation) {
 	    try {
-	        String query = "UPDATE libraryutable SET liblocation = ? WHERE boodid = ?";
+	        String query = "UPDATE libraryutable SET liblocation = ? WHERE bookid = ?";
 	        pstmt = con.prepareStatement(query);
 	        pstmt.setString(1, newLocation);
 	        pstmt.setInt(2, bookId);
@@ -206,7 +206,7 @@ public class Library {
 	
 	public boolean deleteBookById(int bookId) {
 	    try {
-	        String query = "DELETE FROM libraryutable WHERE boodid = ?";
+	        String query = "DELETE FROM libraryutable WHERE bookid = ?";
 	        pstmt = con.prepareStatement(query);
 	        pstmt.setInt(1, bookId);
 	        int rowsAffected = pstmt.executeUpdate();
