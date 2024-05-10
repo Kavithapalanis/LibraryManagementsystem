@@ -22,6 +22,8 @@ public class Librarymain {
 		
 			int choice = sc.nextInt();
 			switch(choice) {
+			// this method is to insert library details
+			
 		    case 1:{
 		    	for(int i=0;i<recordsToInsert;i++) {
 		    
